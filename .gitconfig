@@ -1,0 +1,32 @@
+[alias]
+	df = !git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
+	a = "add"
+	ap = "add -p"
+	c = "commit"
+	co = "checkout"
+	p = "push"
+	pu = "pull"
+	s = "status"
+
+[pull]
+	rebase = false
+
+[core]
+	pager = delta
+	excludesFile = ~/.gitignore
+	editor = nvim
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true    # use n and N to move between diff sections
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+[user]
+	name = David Ramiro
+	email = david@kore.cc
