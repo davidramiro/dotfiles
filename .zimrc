@@ -57,6 +57,4 @@ zmodule zsh-users/zsh-history-substring-search
 zmodule zsh-users/zsh-autosuggestions
 # }}} End configuration added by Zim Framework install
 
-zmodule sorin
-zmodule prompt-pwd
-zmodule git-info
+zmodule romkatv/powerlevel10k --use degit
