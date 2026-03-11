@@ -4,3 +4,7 @@ general.import = [
 
 [font.normal]
 family = "TX02 Nerd Font"
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["--login"]

@@ -148,8 +148,14 @@ eval "$(atuin init zsh)"
 
 source ~/.zshenv
 source ~/.zsh_aliases
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ $(uname) == "Darwin" ]]; then
+	source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+else
+
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
