@@ -15,6 +15,7 @@
 	pager = delta
 	excludesFile = ~/.gitignore
 	editor = nvim
+	autocrlf = input
 
 [interactive]
 	diffFilter = delta --color-only
@@ -30,3 +31,4 @@
 [user]
 	name = David Ramiro
 	email = david@kore.cc
+	signingkey = 5B042737EBEEB736
