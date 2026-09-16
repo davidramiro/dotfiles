@@ -1,0 +1,4 @@
+export ZSHENV="Personal Macbook"
+export STM32_PRG_PATH=/Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/MacOs/bin
+export PATH="/opt/homebrew/bin:$PATH"
+export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
