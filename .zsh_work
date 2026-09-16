@@ -1,3 +1,4 @@
 export ZSHENV="Work Macbook"
 HTTPS_PROXY=http://127.0.0.1:9000
 HTTP_PROXY=http://127.0.0.1:9000
+NO_PROXY= localhost,127.0.0.*,10.*,172.29.220.*,172.29.221.*,172.27.128.239,*.bbraun.com,*.aesculap-extra.net,*.atbbraun.com,*.bbraun.io
