@@ -4,6 +4,26 @@
 #
 # Documentation: https://github.com/romkatv/zsh4humans/blob/v5/README.md.
 
+if [[ -z "$ZELLIJ" ]]; then
+    # Get terminal dimensions using tput
+    _rows=$(tput lines)
+    _cols=$(tput cols)
+
+    # Change these numbers to your preferred minimum size
+    if (( _rows >= 50 && _cols >= 100 )); then
+      if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+          zellij attach -c
+      else
+          zellij
+      fi
+
+      if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+          exit
+      fi
+    fi
+fi
+
+
 # Periodic auto-update on Zsh startup: 'ask' or 'no'.
 # You can manually run `z4h update` to update everything.
 zstyle ':z4h:' auto-update      'no'
