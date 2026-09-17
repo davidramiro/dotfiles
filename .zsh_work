@@ -1,4 +1,10 @@
 export ZSHENV="Work Macbook"
-HTTPS_PROXY=http://127.0.0.1:9000
-HTTP_PROXY=http://127.0.0.1:9000
-NO_PROXY= localhost,127.0.0.*,10.*,172.29.220.*,172.29.221.*,172.27.128.239,*.bbraun.com,*.aesculap-extra.net,*.atbbraun.com,*.bbraun.io
+export HTTP_PROXY=http://127.0.0.1:9000
+export HTTPS_PROXY=http://127.0.0.1:9000
+export http_proxy="$HTTP_PROXY"
+export https_proxy="$HTTPS_PROXY"
+export NO_PROXY=localhost,127.0.0.*,10.*,172.29.220.*,172.29.221.*,172.27.128.239,*.bbraun.com,*.aesculap-extra.net,*.atbbraun.com,*.bbraun.io
+export no_proxy="$NO_PROXY"
+export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
+export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
