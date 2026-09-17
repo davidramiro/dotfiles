@@ -1,0 +1,10 @@
+keybind = cmd+t=unbind
+keybind = cmd+n=unbind
+keybind = cmd+c=unbind
+keybind = cmd+w=unbind
+keybind = cmd+opt+left=unbind
+keybind = cmd+opt+right=unbind
+font-family = JetBrainsMono Nerd Font
+theme = cat.conf
+quit-after-last-window-closed = true
+macos-option-as-alt = left
