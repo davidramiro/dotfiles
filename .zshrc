@@ -4,6 +4,18 @@
 #
 # Documentation: https://github.com/romkatv/zsh4humans/blob/v5/README.md.
 
+# Source shared aliases and host-specific configuration.
+[[ -r "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
+case "$(hostname)" in
+  DE08-M0090) host_config="$HOME/.zsh_work" ;;
+  compooter)  host_config="$HOME/.zsh_fedora" ;;
+  mbp.lan)    host_config="$HOME/.zsh_mbp" ;;
+  *)          host_config='' ;;
+esac
+[[ -r "$host_config" ]] && source "$host_config"
+unset host_config
+
+
 if [[ -z "$ZELLIJ" ]]; then
     # Get terminal dimensions using tput
     _rows=$(tput lines)
@@ -22,7 +34,6 @@ if [[ -z "$ZELLIJ" ]]; then
       fi
     fi
 fi
-
 
 # Periodic auto-update on Zsh startup: 'ask' or 'no'.
 # You can manually run `z4h update` to update everything.
@@ -80,17 +91,6 @@ path=(~/bin $path)
 
 # Export environment variables.
 export GPG_TTY=$TTY
-
-# Source shared aliases and host-specific configuration.
-[[ -r "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
-case "$(hostname)" in
-  DE08-M0090) host_config="$HOME/.zsh_work" ;;
-  compooter)  host_config="$HOME/.zsh_fedora" ;;
-  mbp.lan)    host_config="$HOME/.zsh_mbp" ;;
-  *)          host_config='' ;;
-esac
-[[ -r "$host_config" ]] && source "$host_config"
-unset host_config
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh

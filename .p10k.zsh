@@ -31,6 +31,7 @@
 
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    host_icon               # host glyph from HOST_OS_ICON
     os_icon                 # os identifier
     dir                     # current directory
     vcs                     # git status
@@ -186,11 +187,17 @@
   # Left prompt terminator for lines without any segments.
   typeset -g POWERLEVEL9K_EMPTY_LINE_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=
 
+  #################################[ host_icon: host glyph ]##################################
+  function prompt_host_icon() {
+    [[ -n ${HOST_OS_ICON-} ]] || return
+    p10k segment -f 255 -i "$HOST_OS_ICON"
+  }
+  function instant_prompt_host_icon() { prompt_host_icon }
+  typeset -g POWERLEVEL9K_HOST_ICON_FOREGROUND=255
+
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=255
-  # Custom icon.
-  # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
