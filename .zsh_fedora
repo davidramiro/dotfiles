@@ -1,4 +1,4 @@
 export ZSHENV="compooter"
-HOST_OS_ICON=$'\uF2DB'  # fa-microchip
+HOST_OS_ICON=$'\uF015'  # fa-home
 export PATH=/home/david/.local/bin:/home/david/go/bin:$PATH
 source /home/david/.zsh_secrets
