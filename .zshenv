@@ -15,7 +15,7 @@ if [ -n "${ZSH_VERSION-}" ]; then
   # Do not change anything else in this file.
 
   : ${ZDOTDIR:=~}
-  setopt no_global_rcs
+  #setopt no_global_rcs
   [[ -o no_interactive && -z "${Z4H_BOOTSTRAPPING-}" ]] && return
   setopt no_rcs
   unset Z4H_BOOTSTRAPPING

@@ -1,10 +1,12 @@
-keybind = cmd+t=unbind
-keybind = cmd+n=unbind
-keybind = cmd+c=unbind
-keybind = cmd+w=unbind
-keybind = cmd+opt+left=unbind
-keybind = cmd+opt+right=unbind
-font-family = JetBrainsMono Nerd Font
+font-family = "TX02 Nerd Font"
 theme = cat.conf
 quit-after-last-window-closed = true
 macos-option-as-alt = left
+font-size=10
+font-thicken=true
+font-thicken-strength=1
+adjust-cell-height=1
+background-opacity = 0.85
+background-blur=16
+background=#000000
+shell-integration-features = no-cursor
