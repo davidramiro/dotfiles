@@ -2,7 +2,7 @@ font-family = "TX02 Nerd Font"
 theme = cat.conf
 quit-after-last-window-closed = true
 macos-option-as-alt = left
-font-size=10
+font-variation = opsz=13
 font-thicken=true
 font-thicken-strength=1
 adjust-cell-height=1
